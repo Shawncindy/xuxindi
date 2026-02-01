@@ -51,7 +51,7 @@ export default async function HomePage() {
         {/* 自然风格点缀：另一侧的小叶子（SVG 线条） */}
         <LeafCorner className="pointer-events-none absolute -bottom-10 -right-8 h-44 w-44 rotate-180 text-sky-200/70" />
 
-        <p className="text-sm font-medium text-emerald-700/80">学习小站</p>
+        <p className="text-sm font-medium text-emerald-700/80">欣迪的学习小站</p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           一个安静的小小学习角落
         </h1>

@@ -1,0 +1,28 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accent" x1="10" y1="10" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981" stop-opacity="0.9" />
+      <stop offset="0.55" stop-color="#F472B6" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- 科技：对话气泡里放“节点连接”，代表提问/思维网络 -->
+  <path
+    d="M14 14h20a8 8 0 0 1 8 8v5a8 8 0 0 1-8 8H25l-9 7v-7h-2a8 8 0 0 1-8-8v-5a8 8 0 0 1 8-8Z"
+    stroke="#334155"
+    stroke-width="2.4"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M18 25l6-4 6 3 4-2"
+    stroke="#334155"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="18" cy="25" r="2.6" fill="url(#accent)" />
+  <circle cx="24" cy="21" r="2.6" fill="url(#accent)" />
+  <circle cx="30" cy="24" r="2.6" fill="url(#accent)" />
+  <circle cx="34" cy="22" r="2.6" fill="url(#accent)" />
+</svg>

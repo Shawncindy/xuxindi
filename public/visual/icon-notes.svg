@@ -1,0 +1,33 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paper" x1="10" y1="12" x2="38" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#F1F5F9" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="accent" x1="12" y1="16" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F472B6" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- 艺术：像小本子 + 一点点“手绘笔触” -->
+  <path
+    d="M14 10h20a6 6 0 0 1 6 6v20a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6V16a6 6 0 0 1 6-6Z"
+    fill="url(#paper)"
+    stroke="#334155"
+    stroke-width="2.4"
+  />
+  <path d="M16 10v32" stroke="#334155" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M21 18h14" stroke="#334155" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M21 24h12" stroke="#334155" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M21 30h10" stroke="#334155" stroke-opacity="0.55" stroke-width="2.2" stroke-linecap="round" />
+
+  <!-- 手绘笔触（轻一点） -->
+  <path
+    d="M20 36c6-3 10-3 16 0"
+    stroke="url(#accent)"
+    stroke-width="3.2"
+    stroke-linecap="round"
+    stroke-opacity="0.65"
+  />
+</svg>

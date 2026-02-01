@@ -1,0 +1,22 @@
+<svg width="1200" height="120" viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wave" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7F3D0" stop-opacity="0.55" />
+      <stop offset="0.5" stop-color="#FBCFE8" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#BAE6FD" stop-opacity="0.55" />
+    </linearGradient>
+  </defs>
+
+  <!-- 艺术：柔和曲线做分隔（不抢戏） -->
+  <path
+    d="M0 64c150-44 260-44 410 0s260 44 410 0 260-44 380 0"
+    stroke="url(#wave)"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <!-- 科技：几颗很小的“节点点点” -->
+  <circle cx="210" cy="50" r="4" fill="#10B981" fill-opacity="0.2" />
+  <circle cx="600" cy="70" r="4" fill="#F472B6" fill-opacity="0.18" />
+  <circle cx="980" cy="54" r="4" fill="#38BDF8" fill-opacity="0.2" />
+</svg>

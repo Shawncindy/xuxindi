@@ -1,0 +1,33 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accent" x1="10" y1="10" x2="38" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="0.55" stop-color="#A7F3D0" stop-opacity="0.9" />
+      <stop offset="1" stop-color="#FBCFE8" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- 科技 + 艺术：笔 + 小小“像电路一样的折线”，表示记录/整理 -->
+  <path
+    d="M30 12l6 6-16 16-8 2 2-8 16-16Z"
+    fill="white"
+    fill-opacity="0.85"
+    stroke="#334155"
+    stroke-width="2.4"
+    stroke-linejoin="round"
+  />
+  <path d="M28 14l6 6" stroke="#334155" stroke-width="2.4" stroke-linecap="round" />
+  <path
+    d="M12 18h10l4 4h10"
+    stroke="url(#accent)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-opacity="0.65"
+  />
+
+  <!-- 小小“新增”符号（克制一点） -->
+  <circle cx="14" cy="34" r="7" fill="url(#accent)" fill-opacity="0.22" />
+  <path d="M14 30v8" stroke="#334155" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M10 34h8" stroke="#334155" stroke-width="2.2" stroke-linecap="round" />
+</svg>

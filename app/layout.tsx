@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "学习小站",
+  title: "欣迪的学习小站",
   description: "一个安静的小小学习角落：提问 + 笔记"
 };
 
@@ -56,7 +56,7 @@ export default function RootLayout({
                   strokeLinecap="round"
                 />
               </svg>
-              学习小站
+              欣迪的学习小站
             </Link>
             <nav className="-mx-2 flex flex-wrap items-center gap-1">
               <NavLink href="/">首页</NavLink>
