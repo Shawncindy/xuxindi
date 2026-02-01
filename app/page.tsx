@@ -1,4 +1,5 @@
 import { getAllNotes, SUBJECT_LABELS } from "@/lib/notes";
+import Image from "next/image";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -9,36 +10,6 @@ function formatZhDate(value: string) {
   return d.toLocaleDateString("zh-CN", { month: "numeric", day: "numeric" });
 }
 
-function LeafCorner({ className }: { className: string }) {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 160 160"
-      className={className}
-      fill="none"
-    >
-      <path
-        d="M120 28c-44 10-78 44-88 88 44-10 78-44 88-88Z"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M36 116c14-22 36-44 68-68"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M82 52c6 8 10 18 12 30"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 export default async function HomePage() {
   const notes = await getAllNotes();
   const latest = notes.slice(0, 5);
@@ -46,10 +17,16 @@ export default async function HomePage() {
   return (
     <div className="space-y-10">
       <section className="relative overflow-hidden rounded-3xl border border-emerald-100/70 bg-gradient-to-br from-emerald-50 via-rose-50 to-sky-50 p-6 shadow-sm sm:p-10">
-        {/* 自然风格点缀：角落的小叶子（SVG 线条） */}
-        <LeafCorner className="pointer-events-none absolute -left-6 -top-8 h-40 w-40 text-emerald-200/70" />
-        {/* 自然风格点缀：另一侧的小叶子（SVG 线条） */}
-        <LeafCorner className="pointer-events-none absolute -bottom-10 -right-8 h-44 w-44 rotate-180 text-sky-200/70" />
+        {/* 科技 + 艺术：抽象“电路线条 + 水彩渐变”插画（低透明度，只做氛围） */}
+        <Image
+          src="/visual/hero-tech-art.svg"
+          alt=""
+          aria-hidden="true"
+          width={520}
+          height={340}
+          sizes="(min-width: 640px) 520px, 360px"
+          className="pointer-events-none absolute -right-24 -top-16 w-[360px] opacity-70 sm:w-[520px]"
+        />
 
         <p className="text-sm font-medium text-emerald-700/80">欣迪的学习小站</p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
@@ -71,7 +48,13 @@ export default async function HomePage() {
             className="group rounded-2xl border border-emerald-100/70 bg-white/80 p-5 shadow-sm hover:bg-white"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="text-base font-semibold text-slate-900">去提问</span>
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-50">
+                  {/* 科技：对话气泡 + 节点连接（让“提问”更像在整理思路） */}
+                  <Image src="/visual/icon-ask.svg" alt="" aria-hidden="true" width={28} height={28} />
+                </span>
+                <span className="text-base font-semibold text-slate-900">去提问</span>
+              </div>
               <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
                 AI 帮助理解
               </span>
@@ -87,7 +70,13 @@ export default async function HomePage() {
             className="group rounded-2xl border border-rose-100/70 bg-white/80 p-5 shadow-sm hover:bg-white"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="text-base font-semibold text-slate-900">看学习笔记</span>
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-rose-50">
+                  {/* 艺术：小本子 + 轻轻的手绘笔触（更温柔、不像“工具页面”） */}
+                  <Image src="/visual/icon-notes.svg" alt="" aria-hidden="true" width={28} height={28} />
+                </span>
+                <span className="text-base font-semibold text-slate-900">看学习笔记</span>
+              </div>
               <span className="rounded-full bg-rose-50 px-2 py-0.5 text-xs font-medium text-rose-700">
                 轻松复习
               </span>
@@ -103,7 +92,13 @@ export default async function HomePage() {
             className="group rounded-2xl border border-sky-100/70 bg-white/80 p-5 shadow-sm hover:bg-white"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="text-base font-semibold text-slate-900">写一条新笔记</span>
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-sky-50">
+                  {/* 科技 + 艺术：笔 + 像电路一样的小折线（“记录”和“整理”放一起） */}
+                  <Image src="/visual/icon-new-note.svg" alt="" aria-hidden="true" width={28} height={28} />
+                </span>
+                <span className="text-base font-semibold text-slate-900">写一条新笔记</span>
+              </div>
               <span className="rounded-full bg-sky-50 px-2 py-0.5 text-xs font-medium text-sky-700">
                 记录一下
               </span>
@@ -113,6 +108,24 @@ export default async function HomePage() {
             </p>
             <p className="mt-4 text-sm font-medium text-sky-700">开始写 →</p>
           </Link>
+        </div>
+      </section>
+
+      <section className="relative">
+        {/* 艺术：柔和曲线分隔；科技：少量“节点点点”——做过渡，不抢内容 */}
+        <Image
+          src="/visual/divider-wave.svg"
+          alt=""
+          aria-hidden="true"
+          width={1200}
+          height={120}
+          sizes="100vw"
+          className="pointer-events-none w-full opacity-80"
+        />
+        <div className="mt-3 rounded-2xl border border-slate-200/70 bg-white/70 p-5 text-sm text-slate-700">
+          <p>学习不仅是做题，也可以慢慢整理自己的想法。</p>
+          <p className="mt-2 text-slate-600">把科技当成工具，也把艺术当成一种表达方式。</p>
+          <p className="mt-2 text-slate-600">我会慢慢把这里整理得更清爽一点。</p>
         </div>
       </section>
 
